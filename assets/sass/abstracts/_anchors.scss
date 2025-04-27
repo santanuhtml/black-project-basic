@@ -1,0 +1,25 @@
+@use '../abstracts/colors';
+@use '../abstracts/prefix';
+@use'../abstracts/media-query';
+
+@mixin a{
+	color: colors.$primary-color;
+	@include prefix.transition($time:0.3);
+	@include media-query.media(md) {
+		&:hover {
+			color: colors.$secondary-color;
+		}
+	}
+}
+@mixin a-inverted{
+	color: colors.$secondary-color;
+	@include prefix.transition($time:0.3);
+	@include media-query.media(md) {
+		&:hover {
+			color: colors.$primary-color;
+		}
+	}
+}
+a{
+	@include a;
+}

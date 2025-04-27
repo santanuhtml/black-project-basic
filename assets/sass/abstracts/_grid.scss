@@ -1,0 +1,15 @@
+@mixin grid($cols-lg:4, $cols-md:3, $cols-sm:2, $cols-xsm:1, $gap:20px, $gap-sm:15px){
+  display: grid;
+  grid-template-columns: repeat($cols-xsm, 1fr);
+  gap: $gap-sm;
+  @include media(sm){
+    grid-template-columns: repeat($cols-sm, 1fr);
+    gap: $gap;
+  }
+  @include media(md){
+    grid-template-columns: repeat($cols-md, 1fr);
+  }
+  @include media(lg){
+    grid-template-columns: repeat($cols-lg, 1fr);
+  }
+}

@@ -1,0 +1,162 @@
+// base
+@use 'base/reset';
+
+// abstracts
+@use 'abstracts/columns.scss';
+@use 'abstracts/colors';
+@use 'abstracts/z-index';
+@use 'abstracts/functions';
+@use 'abstracts/border-radius';
+@use 'abstracts/prefix';
+@use 'abstracts/media-query';
+@use 'abstracts/layout';
+@use 'abstracts/fonts';
+@use 'abstracts/spacing';
+@use 'abstracts/buttons';
+@use 'abstracts/animations';
+@use 'abstracts/flex';
+@use 'abstracts/pseudo';
+@use 'abstracts/shadows';
+@use 'abstracts/theme';
+@use 'abstracts/grid';
+@use 'abstracts/anchors';
+
+// blocks
+@use 'blocks/block-side-menu';
+@use 'blocks/block-carousel';
+@use 'blocks/block-theme-mode';
+@use 'blocks/block-accordion';
+@use 'blocks/block-modal';
+@use 'blocks/block-tab';
+
+// body{
+//   @include theme.current-theme($current-theme:light);
+// }
+
+
+/* 
+-----------------------------------
+Features and Guidelines
+-----------------------------------
+
+//colors
+$white;
+$black;
+$shadow;
+$base;
+$primary-color;
+$secondary-color;
+
+//functions
+property: toRem(10px);
+font-size: to-clamp(30px, 80px);
+
+// z index
+$background;      // -1;
+$base;            // 0;
+$on-top;          // 1;
+$overlay;         // 2;
+$header;          // 5;
+$modal;           // 6;
+
+//border-radius
+$border-radius--primary;      // set it
+$border-radius--secondary;    // set it
+$border-radius--xsmall;       // 2px;
+$border-radius--small;        // 5px;
+$border-radius--md;           // 10px;
+$border-radius--lg;           // 15px;
+$border-radius--xl;           // 20px;
+
+//prefix
+@include transition($time:0.3);
+@include transform(rotate(20deg));
+
+//media-query
+@include media(tab){
+}
+
+Width:
+xs: 576px;
+sm: 768px;
+md: 992px;
+tab: 1025px;
+lg: 1200px;
+
+//layout
+$desktop-viwe: 1320px;  //
+$mobile-view: 767px;    //
+o-container-fluid
+o-container
+o-text-center
+o-pull-right
+
+
+// fonts
+o-text-editor
+font-size--h1
+font-size--h2
+font-size--h3
+font-size--p
+
+@include font-size--h1;
+@include font-size--h2;
+@include font-size--h3;
+@include font-size--p;
+
+// spacing
+@include section-padding;
+@include section-padding-sm;
+
+// buttons
+btn 
+btn-primary
+btn-secondary
+btn-line
+btn-large
+
+// animations
+@include object-rotate($time:10s);
+
+// flex
+@include flex($gap:10px);
+@include flex-center($height:200px, $width:200px);
+
+
+// pseudo
+@include gradient-overlay($color:#f00, $lighten:100%); //$lighten:100%
+@include linear-gradient($color-top:#093379, $color-bottom:#00d4ff, $deg:350deg);
+@include square-after(20px, 20px, $primary-color);
+@include square-before(20px, 20px, $primary-color);
+@include image-icons-before(
+    $icon-path:'../images/icons/arrow-right.svg', 
+    $size:14px, 
+    $margin-right:5px,
+    $top:2px 
+  );
+
+// shadows
+$default-shadow;
+
+// grid
+@include grid($cols-lg:4, $cols-md:3, $cols-sm:2, $cols-xsm:1, $gap:20px, $gap-sm:15px);
+
+
+//blocks
+dark-mode
+
+
+Examples:
+.section{
+  @include section-padding-sm;
+  @include font-styles;
+}
+.wrapper{
+  @include grid(4,3,2,1,20px,15px);
+}
+h1{
+  @include font-size--h1;
+  margin-bottom: 50px;
+}
+-----------------------------------
+*/

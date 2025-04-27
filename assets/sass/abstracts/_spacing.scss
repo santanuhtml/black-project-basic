@@ -1,0 +1,14 @@
+
+// @use '../abstracts/functions';
+
+//------------------------------------ secton padding
+@mixin section-padding{
+	padding-top:  functions.to-clamp(30px, 60px);
+	padding-bottom:  functions.to-clamp(30px, 60px);
+}
+
+//------------------------------------ secton padding sm
+@mixin section-padding-sm{
+	padding-top:  functions.to-clamp(30px, 40px);
+	padding-bottom:  functions.to-clamp(30px, 40px);
+}

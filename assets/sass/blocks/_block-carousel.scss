@@ -1,0 +1,61 @@
+@use '../abstracts/functions';
+@use '../abstracts/media-query';
+@use '../abstracts/z-index';
+
+.heroSlider{
+  &__slide{
+    height: functions.toRem(350px);
+    @include media-query.media(md){
+      height: functions.toRem(600px);
+    }
+  }
+  &__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  }
+  &__next{
+    @include media-query.media(md){
+      margin-right: functions.toRem(10px);
+    }
+    &::after{
+      display:none;
+    }
+  }
+  &__prev{
+    @include media-query.media(md){
+      margin-left: functions.toRem(10px);
+    }
+    &::after{
+      display:none;
+    }
+  }
+  &__content-area{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: z-index.$overlay;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+
+.o-swiper-gallery{
+  &__slide{
+    height: functions.toRem(350px);
+    @include media-query.media(md){
+      height: functions.toRem(500px);
+    }
+  }
+  &__slide-sm{
+    height: functions.toRem(150px);
+  }
+  &__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

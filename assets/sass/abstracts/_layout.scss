@@ -1,0 +1,31 @@
+@use '../abstracts/media-query';
+@use '../abstracts/spacing';
+
+$desktop-viwe: 1320px; //given desktop veiw desing width
+$mobile-view: 767px;   //given mobile veiw desing width
+
+.o-container-fluid{
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  @include media-query.media(md){
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.o-container{
+  max-width: $desktop-viwe;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  @include media-query.media(md){
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.o-text-center {
+  text-align: center;
+}
+.o-pull-right {
+  float: right !important;
+}

@@ -1,0 +1,18 @@
+@mixin font-styles {
+	h1 {
+		@include font-size--h1;
+	}
+  h2 {
+		@include font-size--h2;
+	}
+  h3 {
+		@include font-size--h3;
+	}
+  p{
+    @include font-size--p;
+    @include paragraph-margin;
+  }
+  strong{
+    font-weight: $font-weight--bold;
+  }
+}

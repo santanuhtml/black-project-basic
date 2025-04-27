@@ -1,0 +1,7 @@
+@use '../abstracts/theme';
+.dark-theme{
+  @include theme.current-theme(dark);
+  a{
+    color: #ddd;
+  }
+}

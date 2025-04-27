@@ -1,0 +1,36 @@
+
+@use 'sass:color';
+@use '../abstracts/colors';
+@use '../abstracts/functions';
+@use '../abstracts/border-radius';
+
+.o-tab {
+	$o-tab: &;
+	&__buttons {
+		overflow: hidden;
+		gap: functions.toRem(5px);
+	}
+	&__button {
+    display: inline-block;
+    margin-bottom: functions.toRem(5px);
+		&:hover {
+			background: color.adjust(colors.$primary-color, $lightness: -20%);
+		}
+	}
+	&__content {
+		display: none;
+		padding: functions.toRem(25px) functions.toRem(15px);
+		border: 1px solid colors.$base;
+		border-radius:  border-radius.$border-radius--small;
+	}
+	&__title{
+		margin-bottom: functions.toRem(5px);
+		color: colors.$primary-color;
+		font-size: functions.toRem(20px);
+		line-height: 1;
+	}
+	.active {
+		background: color.adjust(colors.$primary-color, $lightness: -20%);
+	}
+}
+

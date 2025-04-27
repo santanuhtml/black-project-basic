@@ -1,0 +1,14 @@
+@mixin flex($gap:10px){
+  display: flex;
+  gap: $gap;
+  width: 100%;
+}
+
+@mixin flex-center($height:auto, $width:auto){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $height;
+  width:$width;
+}
+

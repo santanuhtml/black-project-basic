@@ -1,0 +1,69 @@
+@use 'sass:color';
+@use '../abstracts/colors';
+@use '../abstracts/border-radius';
+@use '../abstracts/prefix';
+@use '../abstracts/functions';
+
+
+.btn {
+	$btn: &;
+	padding: functions.toRem(8px) functions.toRem(20px);
+  border: none;
+  text-align: center;
+	color: colors.$white;
+	font-size: functions.toRem(16px);
+	display: inline-block;
+	border-radius: border-radius.$border-radius--xsmall;
+	cursor: pointer;
+  @include prefix.transition($time:0.2);
+
+	&-primary {
+		background-color: colors.$primary-color;
+		border: 1px solid colors.$primary-color;
+    &:hover{
+      background-color: color.adjust(colors.$primary-color, $lightness: 15%);
+			color: colors.$white;
+    }
+	}
+  &-secondary {
+		background-color: colors.$secondary-color;
+		border: 1px solid colors.$secondary-color;
+    &:hover{
+			background-color: color.adjust(colors.$primary-color, $lightness: 15%);
+			color: colors.$white;
+    }
+	}
+
+	&-line {
+		color: colors.$primary-color;
+		background-color: colors.$white;
+		border: 1px solid colors.$primary-color;
+    &:hover{
+			background-color: color.adjust(colors.$primary-color, $lightness: 15%);
+      color: colors.$white;
+    }
+	}
+	&-large{
+		padding: functions.toRem(8px) functions.toRem(40px);
+	}
+}
+
+
+
+// .btn{
+
+// }
+// .btn-primary{
+//   @extend .btn;
+//   background-color: $primary-color;
+  // &:hover{
+  //   background-color: darken($primary-color,15%);
+  // }
+// }
+// .btn-secondary{
+//   @extend .btn;
+//   background-color: $secondary-color;
+//   &:hover{
+//     background-color: darken($secondary-color,15%);
+//   }
+// }

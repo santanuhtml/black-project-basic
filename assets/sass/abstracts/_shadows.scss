@@ -1,0 +1,10 @@
+
+@use '../abstracts/functions';
+$default-shadow: functions.toRem(1px) functions.toRem(1px) functions.toRem(20px) rgba(0, 0, 0, .1);
+// $default-shadow-header: toRem(0px) toRem(1px) toRem(30px) rgba(231, 166, 21, 0.3);
+// $default-shadow-carousel: toRem(-10px) toRem(10px) toRem(20px) rgba(41, 41, 41, 0.2);
+// $default-text-shadow: toRem(2px) toRem(2px) toRem(4px) #000;
+// $button-hover-shadow: toRem(-10px) toRem(10px) toRem(0px) rgba(0, 0, 0, 0.2);
+// $button-hover-shadow-close: toRem(0px) toRem(10px) toRem(0px) rgba(0, 0, 0, 0.2);
+// $property-inline-boxshadow-default: 0 toRem(7px) toRem(16px) rgba(231,166,21,.2);
+// $property-inline-boxshadow-maison: 0 toRem(7px) toRem(16px) rgba(0, 67, 105,.2);

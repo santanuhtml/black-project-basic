@@ -1,0 +1,21 @@
+@use "sass:math";
+
+@use '../abstracts/layout';
+
+// px to rim
+@function toRem($pxValue) {
+  @return math.div($pxValue, 16px) * 1rem; 
+}
+
+// clamp function
+
+@function to-clamp($smallest-size, $largest-size) {
+	$min-width: toRem(layout.$mobile-view);
+	$max-width: toRem(layout.$desktop-viwe);
+	$size-at-min-width: toRem($smallest-size);
+	$size-at-max-width: toRem($largest-size);
+	$slope: math.div($size-at-max-width - $size-at-min-width, $max-width - $min-width);
+	$y-axis: -1 * $min-width * $slope + $size-at-min-width;
+	$return-value: clamp(#{$size-at-min-width}, #{$y-axis} + #{$slope} * 100vw, #{$size-at-max-width});
+	@return $return-value;
+}

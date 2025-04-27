@@ -1,0 +1,8 @@
+@use '../abstracts/colors';
+
+@mixin current-theme($current-theme:'light'){
+  @if $current-theme == 'dark' {
+    color: colors.$dark-theme-text-color;
+    background-color: colors.$dark-theme-bg-color;
+  }
+}

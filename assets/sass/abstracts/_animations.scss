@@ -1,0 +1,10 @@
+
+
+//Rotate animation
+@mixin object-rotate($time:10s){
+  animation: object-rotate $time linear infinite;
+  @keyframes object-rotate {
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+  }
+}

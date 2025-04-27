@@ -1,0 +1,109 @@
+// Add gradient overlay
+// Add linear gradient
+// Add square before
+// Add square after
+// Add image icon before
+// Add image icon after
+// Add Triangle
+// Add image-pattern-before-top
+
+// Add gradient overlay
+@mixin gradient-overlay($color:#000, $lighten:100%) {
+  &::after {
+    content: "";
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 0,$color $lighten);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+  }
+}
+
+//Add linear gradient
+@mixin linear-gradient($color-top:#093379, $color-bottom:#00d4ff, $deg:350deg) {
+  &::after {
+    content: "";
+    background: $color-top;
+    background: linear-gradient($deg, $color-top 0%, $color-bottom 100%);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+  }
+}
+
+// Add square before
+@mixin square-before($width:10px, $height:10px, $color:#F00) {
+  &::before {
+    content: "";
+    width: $width;
+    height: $height;
+    display: inline-block;
+    background-color: $color;
+  }
+}
+
+// Add square after
+@mixin square-after($width:10px, $height:10px, $color:#F00) {
+  &::after {
+    content: "";
+    width: $width;
+    height: $height;
+    display: inline-block;
+    background-color: $color;
+  }
+}
+
+//Add image icon before
+@mixin image-icons-before($icon-path, $size: 16px, $margin-right:5px, $top:2px){
+  &::before {
+    content: ""; 
+    position: relative;
+    display: inline-block;
+    background:  url('#{$icon-path}');
+    width: $size;
+    height: $size;
+    margin-right: $margin-right;
+    top: $top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+// Add Triangle
+@mixin triangle($size, $color) {
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+    display: inline-block;
+  }
+}
+
+// Add image-pattern-before-top
+@mixin image-pattern-before-top($icon-path){
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 30px;
+    width: 100%;
+    max-width: 248px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    background-image: url('#{$icon-path}');
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translate(-50%);
+  }
+}
