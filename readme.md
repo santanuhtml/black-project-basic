@@ -1,6 +1,5 @@
 # **BLANK-PROJECT-BASIC**
 
----
 
 ## 📦 Project Setup
 
