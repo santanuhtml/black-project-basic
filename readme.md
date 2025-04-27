@@ -1,4 +1,4 @@
-# **BLANK-PROJECT-BASIC: Features and Guidelines**
+# **BLANK-PROJECT-BASIC**
 
 ---
 
